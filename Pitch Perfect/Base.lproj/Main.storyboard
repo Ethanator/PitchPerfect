@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IdX-tB-R8J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IdX-tB-R8J">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1B-N6-u0d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1B-N6-u0d">
                                 <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,12 +27,6 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5aT-Dj-sOI"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRu-pS-BGF">
-                                <rect key="frame" x="267" y="375" width="66.5" height="14"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="14"/>
-                                <color key="textColor" red="0.10196078431372549" green="0.21568627450980393" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quS-9p-J4S">
                                 <rect key="frame" x="275" y="500" width="50" height="50"/>
                                 <state key="normal" image="stop">
@@ -42,24 +36,50 @@
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7dC-wl-heX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRu-pS-BGF">
+                                <rect key="frame" x="267" y="375" width="66.5" height="14"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="0.10196078431372549" green="0.21568627450980393" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764709999999" green="0.59607843140000005" blue="0.78039215689999997" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="aRu-pS-BGF" secondAttribute="centerX" constant="-0.5" id="1Ot-Fq-iyT"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="quS-9p-J4S" secondAttribute="bottom" constant="50" id="DYA-jo-eNk"/>
+                            <constraint firstAttribute="centerY" secondItem="v1B-N6-u0d" secondAttribute="centerY" id="2Uh-J2-owJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="quS-9p-J4S" secondAttribute="bottom" constant="50" id="497-pX-adO"/>
+                            <constraint firstItem="aRu-pS-BGF" firstAttribute="top" secondItem="v1B-N6-u0d" secondAttribute="bottom" constant="25" id="4IW-HC-PRL"/>
+                            <constraint firstAttribute="centerX" secondItem="quS-9p-J4S" secondAttribute="centerX" id="QI4-CR-3oF"/>
+                            <constraint firstAttribute="centerX" secondItem="v1B-N6-u0d" secondAttribute="centerX" id="UPJ-Dl-LSx"/>
                             <constraint firstAttribute="centerX" secondItem="quS-9p-J4S" secondAttribute="centerX" id="eh9-5n-skU"/>
                             <constraint firstItem="aRu-pS-BGF" firstAttribute="top" secondItem="v1B-N6-u0d" secondAttribute="bottom" constant="25" id="g5r-SJ-Y7s"/>
                             <constraint firstAttribute="centerY" secondItem="v1B-N6-u0d" secondAttribute="centerY" id="o2f-Oz-Nbh"/>
                             <constraint firstAttribute="centerX" secondItem="v1B-N6-u0d" secondAttribute="centerX" id="s00-4w-2gP"/>
+                            <constraint firstAttribute="centerX" secondItem="aRu-pS-BGF" secondAttribute="centerX" constant="-0.75" id="wyj-Nc-v30"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="DYA-jo-eNk"/>
+                                <exclude reference="2Uh-J2-owJ"/>
+                                <exclude reference="UPJ-Dl-LSx"/>
+                                <exclude reference="4IW-HC-PRL"/>
+                                <exclude reference="wyj-Nc-v30"/>
+                                <exclude reference="QI4-CR-3oF"/>
+                                <exclude reference="497-pX-adO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <include reference="DYA-jo-eNk"/>
+                                <include reference="2Uh-J2-owJ"/>
+                                <include reference="UPJ-Dl-LSx"/>
+                                <exclude reference="o2f-Oz-Nbh"/>
+                                <exclude reference="s00-4w-2gP"/>
+                                <exclude reference="1Ot-Fq-iyT"/>
+                                <include reference="4IW-HC-PRL"/>
+                                <exclude reference="g5r-SJ-Y7s"/>
+                                <include reference="wyj-Nc-v30"/>
+                                <include reference="QI4-CR-3oF"/>
+                                <exclude reference="eh9-5n-skU"/>
+                                <include reference="497-pX-adO"/>
                             </mask>
                         </variation>
                     </view>
